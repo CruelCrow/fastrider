@@ -1,0 +1,56 @@
+.fast-rider .process {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  > div {
+    text-align: center;
+    position: relative;
+    padding-top: 55px;
+    width: 30%;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      background-color: $color-icon-process;
+      border-radius: 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 75% auto;
+      width: 47px;
+      height: 47px;
+      display: inline-block;
+    }
+    &:nth-child(1) {
+      &:before {
+        background-image: url('/images/ico-01.svg');
+      }
+    }
+    &:nth-child(2) {
+      &:before {
+        background-image: url('/images/ico-02.svg');
+      }
+    }
+    &:nth-child(3) {
+      &:before {
+        background-image: url('/images/ico-03.svg');
+      }
+    }
+  }
+  @include mobile {
+    display: block;
+    max-width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    > div {
+      display: block;
+      width: initial;
+      &:nth-child(1), &:nth-child(2) {
+        margin-bottom: 2em;
+      }
+    }
+  }
+}

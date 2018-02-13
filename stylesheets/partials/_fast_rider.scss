@@ -1,0 +1,68 @@
+.fast-rider {
+  max-width: $max-desktop-content-width;
+  margin: auto;
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  @include mobile {
+    max-width: initial;
+    margin-left: 2vmin;
+    margin-right: 2vmin;
+  }
+
+  > .loading-ticket {
+    position: fixed;
+    z-index: $z-index-loading;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    .progress {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .ticket-success {
+    max-width: $cube-size * 2;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    position: relative;
+    padding-top: 55px;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      background-color: $color-icon-process;
+      border-radius: 50%;
+      background-image: url('/images/ico-04.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 75% auto;
+      width: 47px;
+      height: 47px;
+      display: inline-block;
+    }
+  }
+
+  > .errors {
+    position: fixed;
+    z-index: $z-index-error;
+    right: 0;
+    bottom: 0;
+    > .error {
+      padding: 1em;
+      background-color: white;
+      border-color: red;
+    }
+  }
+}

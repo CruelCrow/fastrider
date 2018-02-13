@@ -1,0 +1,54 @@
+.fast-rider .pin {
+  width: calc(100% - #{$cube-margin * 2});
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  input {
+    border: 1px solid black;
+    background-color: white;
+    padding: 1em;
+    box-sizing: border-box;
+    outline: none;
+    font-size: large;
+  }
+  button {
+    padding: 1em;
+    box-sizing: border-box;
+    border: 1px solid black;
+    outline: none;
+    color: white;
+    background-color: $color-submit;
+    font-size: large;
+    cursor: pointer;
+  }
+
+  @include desktop {
+    input {
+      width: $pin-input-width;
+      border-right: none;
+    }
+    button {
+      width: calc(100% - #{$pin-input-width});
+      border-left: none;
+    }
+  }
+
+  @include mobile {
+    input {
+      width: 100%;
+    }
+    button {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      z-index: $z-index-submit;
+      border: none;
+      display: none;
+      &.mobile-visible {
+        display: initial;
+      }
+    }
+  }
+}

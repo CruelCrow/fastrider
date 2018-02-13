@@ -1,0 +1,15 @@
+$min-small-mobile-width: 375px;
+$min-desktop-width: 768px;
+$mobile-content-padding: 2vmin;
+
+$cube-size: 170px;
+$cube-size-mobile: 150px;
+$cube-margin: 4px;
+$cube-padding: 10px;
+$pin-input-width: 533px;
+$max-desktop-content-width: ($cube-size + $cube-margin * 2) * 4;
+
+$z-index-default: 1000;
+$z-index-submit: 2000;
+$z-index-loading: 2500;
+$z-index-error: 3000;

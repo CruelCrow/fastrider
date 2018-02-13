@@ -1,0 +1,21 @@
+{
+  "name": "cloudinary",
+  "description": "",
+  "repository": "https://github.com/CruelCrow/cloudinary.git",
+  "env": {
+
+  },
+  "environments": {
+    "development": {
+      "env": {
+      }
+    },
+    "test": {
+      "env": {
+      }
+    }
+  },
+  "scripts": {
+
+  }
+}

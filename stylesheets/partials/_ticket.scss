@@ -1,0 +1,51 @@
+.fast-rider .ticket {
+  max-width: $cube-size * 2;
+  margin-left: auto;
+  margin-right: auto;
+  height: $cube-size;
+  box-sizing: border-box;
+  background-color: $color-cube;
+  position: relative;
+  .zone-color {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px;
+  }
+  .zone-name {
+    top: $cube-padding;
+    right: $cube-padding;
+    width: auto;
+    position: absolute;
+  }
+  .ride-name {
+    top: $cube-padding;
+    left: $cube-padding;
+    width: auto;
+    position: absolute;
+    color: white;
+  }
+  .return-time-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    text-align: center;
+    .return-time {
+      color: white;
+      font-size: large;
+    }
+  }
+  .access-code-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    text-align: center;
+    .access-code {
+      color: white;
+      font-size: large;
+    }
+  }
+}
